@@ -1,4 +1,4 @@
-export default {
+export default { //Change this to personal info eventually
     name: 'companyInfo',
     title: 'Company Information',
     type: 'document',
