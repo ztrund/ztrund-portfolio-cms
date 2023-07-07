@@ -36,11 +36,19 @@ export default {
                         title: 'University',
                     },
                     {
-                        name: 'year',
+                        name: 'startDate',
                         type: 'date',
-                        title: 'Year',
+                        title: 'Start Date',
                         options: {
-                            dateFormat: 'YYYY',
+                            dateFormat: 'MMMM YYYY',
+                        }
+                    },
+                    {
+                        name: 'endDate',
+                        type: 'date',
+                        title: 'End Date',
+                        options: {
+                            dateFormat: 'MMMM YYYY',
                         }
                     },
                 ],

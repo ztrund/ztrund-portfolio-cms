@@ -25,7 +25,7 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
-            title: "Programming Languages",
+            title: "Languages",
             name: "languages",
             type: "array",
             of: [{ type: "string" }],
@@ -33,7 +33,7 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
-            title: "Technologies/Tools Used",
+            title: "Technologies",
             name: "technologies",
             type: "array",
             of: [{ type: "string" }],
