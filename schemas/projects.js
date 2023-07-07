@@ -4,6 +4,16 @@ export default {
     type: "document",
     fields: [
         {
+            title: "Slug",
+            name: "slug",
+            type: "slug",
+            description: "The slug is used to generate the URL for the project page.",
+            options: {
+                source: "projectTitle",
+                maxLength: 96,
+            },
+        },
+        {
             title: "Project Title",
             name: "projectTitle",
             type: "string",
@@ -28,7 +38,7 @@ export default {
             title: "Languages",
             name: "languages",
             type: "array",
-            of: [{ type: "string" }],
+            of: [{type: "string"}],
             description: "Programming languages used in the project.",
             validation: (Rule) => Rule.required(),
         },
@@ -36,7 +46,7 @@ export default {
             title: "Technologies",
             name: "technologies",
             type: "array",
-            of: [{ type: "string" }],
+            of: [{type: "string"}],
             description: "Technologies, libraries, frameworks, and tools used in the project.",
             validation: (Rule) => Rule.required(),
         },
