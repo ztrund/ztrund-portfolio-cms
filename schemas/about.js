@@ -1,59 +1,57 @@
 export default {
     name: 'about',
-    title: 'About Us',
+    title: 'About Me',
     type: 'document',
     fields: [
         {
-            name: 'content',
-            title: 'Content',
+            name: 'bio',
+            title: 'Bio',
             type: 'array',
             of: [{type: 'block'}],
             validation: Rule => Rule.required(),
         },
         {
-            title: "Media Items",
-            name: "mediaItems",
-            type: "array",
-            of: [{type: "media"}],
-            description: "One or more media items to show on about us page (photos or videos)."
+            name: 'image',
+            title: 'Profile Image',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
         },
         {
-            name: 'team',
-            title: 'Team',
+            name: 'education',
+            title: 'Education',
             type: 'array',
-            of: [
-                {
-                    type: 'object',
-                    fields: [
-                        {
-                            name: 'name',
-                            title: 'Name',
-                            type: 'string',
-                            validation: Rule => Rule.required()
-                        },
-                        {
-                            name: 'position',
-                            title: 'Position',
-                            type: 'string'
-                        },
-                        {
-                            name: 'image',
-                            title: 'Image',
-                            type: 'image',
-                            options: {
-                                hotspot: true
-                            },
-                            validation: Rule => Rule.required()
+            of: [{
+                type: 'object',
+                fields: [
+                    {
+                        name: 'degree',
+                        type: 'string',
+                        title: 'Degree',
+                    },
+                    {
+                        name: 'university',
+                        type: 'string',
+                        title: 'University',
+                    },
+                    {
+                        name: 'year',
+                        type: 'date',
+                        title: 'Year',
+                        options: {
+                            dateFormat: 'YYYY',
                         }
-                    ]
-                }
-            ]
+                    },
+                ],
+            }],
         },
         {
-            name: 'teamDescription',
-            title: 'Team Description',
+            name: 'skills',
+            title: 'Skills',
             type: 'array',
-            of: [{type: 'block'}],
-        }
+            of: [{type: 'string'}],
+            description: 'List of skills',
+        },
     ],
 };

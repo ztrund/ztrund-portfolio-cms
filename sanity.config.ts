@@ -44,7 +44,7 @@ export default defineConfig({
                                     .documentId("homepage")
                             ),
                         S.listItem()
-                            .title("About Us")
+                            .title("About Me")
                             .id("about")
                             .child(
                                 S.document()
@@ -60,14 +60,6 @@ export default defineConfig({
                                     .documentId("contactInfo")
                             ),
                         S.listItem()
-                            .title("Financing")
-                            .id("financing")
-                            .child(
-                                S.document()
-                                    .schemaType("financing")
-                                    .documentId("financing")
-                            ),
-                        S.listItem()
                             .title("Meta Descriptions")
                             .id("metaDescriptions")
                             .child(
@@ -77,8 +69,6 @@ export default defineConfig({
                             ),
 
                         // Regular document types
-                        S.documentTypeListItem("puppies").title("Puppies"),
-                        S.documentTypeListItem("parents").title("Parents"),
                         S.documentTypeListItem("projects").title("Projects"),
                     ]),
         }),
