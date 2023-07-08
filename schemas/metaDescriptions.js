@@ -16,14 +16,8 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
-            name: 'puppies',
-            title: 'Puppies',
-            type: 'string',
-            validation: (Rule) => Rule.required(),
-        },
-        {
-            name: 'parents',
-            title: 'Parents',
+            name: 'projects',
+            title: 'Projects',
             type: 'string',
             validation: (Rule) => Rule.required(),
         },
@@ -34,14 +28,8 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
-            name: 'puppy',
-            title: 'Puppy',
-            type: 'string',
-            validation: (Rule) => Rule.required(),
-        },
-        {
-            name: 'parent',
-            title: 'Parent',
+            name: 'project',
+            title: 'Project',
             type: 'string',
             validation: (Rule) => Rule.required(),
         },

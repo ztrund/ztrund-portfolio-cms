@@ -11,15 +11,6 @@ export default { //Change this to personal info eventually
             validation: (Rule) => Rule.required(),
         },
         {
-            name: 'companyLogo',
-            title: 'Company Logo',
-            type: 'image',
-            description: 'Upload your company logo here. It will be used on the left side of the header across the site. If not provided, the company name will be used instead.',
-            options: {
-                hotspot: true,
-            },
-        },
-        {
             name: 'favicon',
             title: 'Website Favicon',
             type: 'image',

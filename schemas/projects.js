@@ -12,6 +12,7 @@ export default {
                 source: "projectTitle",
                 maxLength: 96,
             },
+            validation: (Rule) => Rule.required(),
         },
         {
             title: "Project Title",
