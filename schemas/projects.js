@@ -22,11 +22,12 @@ export default {
             validation: (Rule) => Rule.required(),
         },
         {
-            title: "Description",
-            name: "description",
-            type: "text",
+            title: 'Description',
+            name: 'description',
+            type: 'array',
             description: "A brief summary of the project.",
-            validation: (Rule) => Rule.required(),
+            of: [{type: 'block'}],
+            validation: Rule => Rule.required(),
         },
         {
             title: "Role",
@@ -62,6 +63,32 @@ export default {
             name: "liveLink",
             type: "url",
             description: "Link to the live version of the project (if applicable).",
+        },
+        {
+            title: "Other Links",
+            name: "otherLinks",
+            type: "array",
+            of: [
+                {
+                    type: "object",
+                    fields: [
+                        {
+                            title: "Link Title",
+                            name: "linkTitle",
+                            type: "string",
+                            description: "Title of the link.",
+                            validation: (Rule) => Rule.required(),
+                        },
+                        {
+                            title: "Link URL",
+                            name: "linkUrl",
+                            type: "url",
+                            description: "URL of the link.",
+                            validation: (Rule) => Rule.required(),
+                        },
+                    ],
+                },
+            ],
         },
         {
             title: "Media Items",
